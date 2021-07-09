@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'file:///D:/AndroidStudioProjects/flutter_netflix_draw/lib/Library/Library.dart';
 import 'file:///D:/AndroidStudioProjects/flutter_netflix_draw/lib/Recommend/Recommend.dart';
-import 'package:flutter_netflix_draw/MyList/MyList.dart';
-import 'package:flutter_netflix_draw/MyList/Popular.dart';
+import 'package:flutter_netflix_draw/MyList/type.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,16 +15,16 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       home:Scaffold(
         appBar: AppBar(
-          leading: IconButton(icon: Icon(Icons.menu),onPressed: (){
+          leading: IconButton(icon: Icon(Icons.menu,color: Colors.white),onPressed: (){
           },
           color: Colors.black,),
           elevation: 0,
-          backgroundColor: Colors.white24,
+          backgroundColor: Colors.black87,
           centerTitle: true,
           title: Image.asset('assets/image/netflix (2).png'),
           actions: <Widget>[
             IconButton(
-                icon: Icon(Icons.search),
+                icon: Icon(Icons.search,color: Colors.white,),
                 color: Colors.black,
                 onPressed:(){
 
@@ -38,24 +37,30 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyBody extends StatelessWidget{
+class MyBody extends StatefulWidget{
+  @override
+  _MyBodyState createState() => _MyBodyState();
+}
+
+class _MyBodyState extends State<MyBody> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white24,
+      color: Colors.black87,
       child: ListView(
         children: [
          ListFilmRecommended(),
           SizedBox(height: 20,),
           Library(),
           SizedBox(height: 20,),
-          List(),
+          Type(type: "popular", page: "1",title: "Popular   ",),
           SizedBox(height: 20,),
-          Popular()
+          Type(type: "top_rated", page: "2",title: "Top Rated",),
+          SizedBox(height: 20,),
+          Type(type: "upcoming", page: "2",title: "Up coming",),
+          //Popular()
         ],
       )
     );
   }
-
-
 }
