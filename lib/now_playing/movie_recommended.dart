@@ -33,24 +33,24 @@ class FilmRecommended extends StatelessWidget{
                  fit: BoxFit.cover
              )
          ),
-         child: Column(
-           children: [
-             SizedBox(
-               height: 120,
-             ),
-             Align(
-               alignment: Alignment.bottomLeft,
-               child: Text(
-                 filmName,
-                 textAlign: TextAlign.start,
-                 style: TextStyle(
-                     fontSize: 20,
-                     color: Colors.white70,
-                     fontWeight: FontWeight.bold
-                 ),),
-             ),
-           ],
-         )
+         // child: Column(
+         //   children: [
+         //     SizedBox(
+         //       height: 120,
+         //     ),
+         //     Align(
+         //       alignment: Alignment.bottomLeft,
+         //       child: Text(
+         //         filmName,
+         //         textAlign: TextAlign.start,
+         //         style: TextStyle(
+         //             fontSize: 20,
+         //             color: Colors.white70,
+         //             fontWeight: FontWeight.bold
+         //         ),),
+         //     ),
+         //   ],
+         // )
      ),
    );
   }

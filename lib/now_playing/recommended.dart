@@ -1,28 +1,27 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
-import 'file:///D:/AndroidStudioProjects/flutter_netflix_draw/lib/Recommend/FilmRecommended.dart';
+import 'file:///D:/AndroidStudioProjects/flutter_netflix_draw/lib/now_playing/movie_recommended.dart';
 import 'package:flutter_netflix_draw/Data/api_provider.dart';
 import 'package:flutter_netflix_draw/Data/film.dart';
 import 'package:flutter_netflix_draw/Data/film_response.dart';
 import 'package:flutter_netflix_draw/condition.dart';
 
 class ListFilmRecommended extends StatefulWidget{
-  final String filmName;
 
-  const ListFilmRecommended({Key key, this.filmName}) : super(key: key);
+
+  const ListFilmRecommended({Key key}) : super(key: key);
 
   @override
-  _ListFilmRecommendedState createState() => _ListFilmRecommendedState(filmName,"now_playing","1");
+  _ListFilmRecommendedState createState() => _ListFilmRecommendedState("now_playing","1");
 }
 
 class _ListFilmRecommendedState extends State<ListFilmRecommended> {
-  final String filmName;
   final String type;
   final String page;
   FilmApiProvider _apiProvider = FilmApiProvider();
   Condition _condition = Condition();
 
-  _ListFilmRecommendedState(this.filmName, this.type, this.page);
+  _ListFilmRecommendedState(this.type, this.page);
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<FilmResponse>(
@@ -48,13 +47,13 @@ class _ListFilmRecommendedState extends State<ListFilmRecommended> {
       items:[
         FilmRecommended(
           imagePath: film[1].posterPath,
-          filmName: film[1].originalTitle,),
+          ),
         FilmRecommended(
           imagePath: film[2].posterPath,
-          filmName: film[2].originalTitle,),
+          ),
         FilmRecommended(
           imagePath: film[3].posterPath,
-          filmName: film[3].originalTitle,),
+          ),
       ],
       options: CarouselOptions(
         height: 170.0,

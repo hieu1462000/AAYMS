@@ -5,7 +5,7 @@ class Film {
   final String overview;
   final String posterPath;
   final String releaseDate;
-  final String voteAverage;
+  final double voteAverage;
 
   Film(this.id, this.originalLanguage, this.originalTitle, this.overview, this.posterPath, this.releaseDate, this.voteAverage);
 
@@ -15,7 +15,7 @@ class Film {
         originalTitle =  json['original_title'],
         overview = json['overview'],
         posterPath = 'https://image.tmdb.org/t/p/w500'+json['poster_path'],
-        voteAverage = json['vote_average'],
+        voteAverage = double.parse(json["vote_average"].toString()),
         releaseDate = json['release_date'];
 
 }

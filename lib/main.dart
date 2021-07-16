@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'file:///D:/AndroidStudioProjects/flutter_netflix_draw/lib/Library/Library.dart';
-import 'file:///D:/AndroidStudioProjects/flutter_netflix_draw/lib/Recommend/Recommend.dart';
-import 'package:flutter_netflix_draw/MyList/type.dart';
+import 'file:///D:/AndroidStudioProjects/flutter_netflix_draw/lib/Library/library.dart';
+import 'file:///D:/AndroidStudioProjects/flutter_netflix_draw/lib/now_playing/recommended.dart';
+import 'package:flutter_netflix_draw/typical/type.dart';
 
 void main() {
   runApp(MyApp());
