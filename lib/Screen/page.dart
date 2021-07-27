@@ -4,7 +4,6 @@ import 'package:flutter_netflix_draw/movie_list.dart';
 
 class SecondHome extends StatelessWidget {
   final String type;
-
   const SecondHome({Key key, this.type}) : super(key: key);
 
   @override
@@ -35,7 +34,6 @@ class SecondHome extends StatelessWidget {
 
 class MyBody extends StatelessWidget {
   final String type;
-
   const MyBody({Key key, this.type}) : super(key: key);
 
   @override

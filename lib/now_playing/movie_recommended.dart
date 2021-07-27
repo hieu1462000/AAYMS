@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_netflix_draw/Screen2/Screen2.dart';
 
 class FilmRecommended extends StatelessWidget{
   final String imagePath;

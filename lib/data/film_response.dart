@@ -1,3 +1,5 @@
+
+
 import 'film.dart';
 
 class FilmResponse {
@@ -5,7 +7,6 @@ class FilmResponse {
   final String error;
 
   FilmResponse(this.results, this.error);
-
   FilmResponse.fromJson(Map<String, dynamic> json)
     : results = (json["results"] as List).map((i) => new Film.fromJson(i)).toList(),
       error = "";
@@ -15,3 +16,4 @@ class FilmResponse {
         error = errorValue;
 
 }
+

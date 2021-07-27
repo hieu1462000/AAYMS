@@ -5,7 +5,7 @@ import 'package:intl/intl.dart';
 import 'Data/api_provider.dart';
 import 'Data/film.dart';
 import 'typical/task.dart';
-import 'condition.dart';
+import 'data/condition.dart';
 
 class MovieList extends StatefulWidget {
   final String type;

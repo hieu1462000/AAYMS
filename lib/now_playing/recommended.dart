@@ -4,7 +4,7 @@ import 'file:///D:/AndroidStudioProjects/flutter_netflix_draw/lib/now_playing/mo
 import 'package:flutter_netflix_draw/Data/api_provider.dart';
 import 'package:flutter_netflix_draw/Data/film.dart';
 import 'package:flutter_netflix_draw/Data/film_response.dart';
-import 'package:flutter_netflix_draw/condition.dart';
+import 'file:///D:/AndroidStudioProjects/flutter_netflix_draw/lib/data/condition.dart';
 
 class ListFilmRecommended extends StatefulWidget{
 

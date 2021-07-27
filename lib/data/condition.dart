@@ -6,7 +6,8 @@ class Condition {
     return Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [Text("Loading data from API..."), CircularProgressIndicator()],
+          children: [//Text("Loading data from API...",),
+            CircularProgressIndicator()],
         ));
   }
 

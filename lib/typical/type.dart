@@ -4,10 +4,10 @@ import 'package:flutter_netflix_draw/Data/api_provider.dart';
 import 'package:flutter_netflix_draw/Data/film.dart';
 import 'package:flutter_netflix_draw/Data/film_response.dart';
 import 'package:flutter_netflix_draw/typical/task.dart';
-import 'package:flutter_netflix_draw/condition.dart';
-import 'package:intl/intl.dart';
+import 'file:///D:/AndroidStudioProjects/flutter_netflix_draw/lib/data/condition.dart';
 
-import '../page.dart';
+
+import '../Screen/page.dart';
 
 class Type extends StatefulWidget {
   final String type;
@@ -28,7 +28,6 @@ class _TypeState extends State<Type> {
 
   _TypeState(this.type, this.page, this.title);
   @override
-  @override
   Widget build(BuildContext context) {
     return FutureBuilder<FilmResponse>(
       future: _apiProvider.getFilm(type, page),
@@ -48,7 +47,6 @@ class _TypeState extends State<Type> {
   }
 
   Widget _buildFilmWidget(FilmResponse data) {
-    var dateTime = DateFormat('yyyy-MM-dd');
     List<Film> film = data.results;
     return Container(
         padding: EdgeInsets.only(
@@ -96,9 +94,9 @@ class _TypeState extends State<Type> {
                     return Task(
                       imagePath: film[index].posterPath,
                       filmName: film[index].originalTitle,
+                      movieId: film[index].id,
                       rating: film[index].voteAverage,
-                      date: DateFormat.yMMMMd('en_US')
-                          .format(dateTime.parse(film[index].releaseDate)),
+                      date: film[index].releaseDate
                     );
                   }),
             ),

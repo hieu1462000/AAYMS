@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_netflix_draw/page.dart';
+import 'file:///D:/AndroidStudioProjects/flutter_netflix_draw/lib/Screen/page.dart';
 
 class LibraryItem extends StatelessWidget{
   final String imagePath;
